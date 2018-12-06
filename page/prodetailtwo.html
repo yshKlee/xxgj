@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>商品详情</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/changebox.css" />
+		<link href="../css/video-js.css" rel="stylesheet">
+		<style type="text/css">
+			body {
+				height: auto;
+			}
+			
+			.m {
+				width: 100%;
+				min-height: 200px;
+				margin: 10px auto;
+			}
+			
+			#myVideo {
+				width: 100%;
+				min-height: 200px;
+			}
+			
+			.likebtn {
+				position: absolute;
+				right: 15px;
+				top: 15px;
+				z-index: 10;
+				width: 22px;
+				height: 19px;
+				display: block;
+				background: url(../img/aix@2x.png) no-repeat;
+				background-size: 100%;
+			}
+			
+			.likebtn.active {
+				background-image: url(../img/aixin@2x.png);
+			}
+			
+			.isprice {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="body prodetail">
+			<!-- Slider main container -->
+			<div class="swiper-container">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide"><img src="../img/prodetailpage.png" /></div>
+					<div class="swiper-slide"><img src="../img/prodetailpage.png" /></div>
+					<div class="swiper-slide"><img src="../img/prodetailpage.png" /></div>
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+				<a href="javascript:;" class="likebtn">
+
+				</a>
+			</div>
+			<!--商品信息-->
+			<div class="weui-panel weui-panel_access">
+
+				<div class="weui-panel__bd">
+					<div class="weui-media-box weui-media-box_appmsg">
+
+						<div class="weui-media-box__bd derailmsg">
+							<h4 class="">高速钢钢轨钻高速钢钢轨钻</h4>
+							<!--<span class="isjifen"><b>1000</b><i>积分</i></span>-->
+							<span class="isprice">
+								<i class="left" style="margin-top: 10px;">￥</i>
+								<span class="span_txt left">59</span>
+							<span class="icon_ec6200 left">满额包邮</span> <span class="icon_ffa103 left">赠送积分</span>
+							<div class="clear"></div>
+							</span><br>
+							<span class="isprice"><span style="color: #000000;">会员价：</span><em>￥88</em></span>
+							<p><span>快递：5.00</span> <em>浙江嘉兴</em></p>
+							<a href="javascript:;" class="sharebox">
+								<img src="../img/fenx@2x.png" />
+								<p>分享</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="space"></div>
+			<a href="javascript:prop('#changeOptions');" class="weui-cell weui-cell_access " id="change-guige">
+				<div class="weui-cell__bd">
+					<p>选择规格</p>
+				</div>
+				<div class="weui-cell__ft"></div>
+			</a>
+			<a href="javascript:prop('#canshu');" class="weui-cell weui-cell_access">
+				<div class="weui-cell__bd">
+					<p>商品参数</p>
+				</div>
+				<div class="weui-cell__ft"></div>
+			</a>
+
+			<div class="space"></div>
+			<div class="detailtab">
+				<div class="weui-tab">
+					<div class="weui-navbar">
+						<a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+							图文详情
+						</a>
+						<a class="weui-navbar__item" href="#tab2">
+							视频介绍
+						</a>
+					</div>
+					<div class="weui-tab__bd">
+						<div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+							<div class="contentbox">
+								<p>浙江欣兴工具有限公司始建于1992年，拥有先进技术装备，是研发、制造高性能切削刀具的专业生产企业。多刃钢板钻（又名空心钻或取芯钻），是欣兴工具在国内率先研制生产，2003年被认定为“国家重点新产品”。</p>
+								<img src="../img/pricontent.png" />
+								<p>浙江欣兴工具有限公司始建于1992年，拥有先进技术装备，是研发、制造高性能切削刀具的专业生产企业。多刃钢板钻（又名空心钻或取芯钻），是欣兴工具在国内率先研制生产，2003年被认定为“国家重点新产品”。</p>
+								<img src="../img/pricontent.png" />
+							</div>
+
+						</div>
+						<div id="tab2" class="weui-tab__bd-item">
+							<div class="contentbox">
+								<p>浙江欣兴工具有限公司始建于1992年，拥有先进技术装备，是研发、制造高性能切削刀具的专业生产企业。多刃钢板钻（又名空心钻或取芯钻），是欣兴工具在国内率先研制生产，2003年被认定为“国家重点新产品”。</p>
+								<div class="m">
+									<video id="myVideo" class="video-js" controls preload="auto" poster="" data-setup="{}">
+										<source src="oceans.mp4" type="video/mp4">
+										<p class="vjs-no-js">
+											To view this video please enable JavaScript, and consider upgrading to a web browser that
+											<a href="oceans.mp4" target="_blank">supports HTML5 video</a>
+										</p>
+									</video>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="duihuanbtn">
+			立即兑换
+		</div>
+
+		<div id="canshu" class="weui-popup__container popup-bottom canshu">
+
+			<!--弹层  popup-bottom 这个Class从底部拉起的非全屏弹层  去掉就是全屏-->
+			<div class="weui-popup__overlay">
+				<!-- 遮罩 -->
+			</div>
+			<div class="weui-popup__modal">
+				<!-- 内容 -->
+				<div class="canshutitle">
+					<p>商品参数</p>
+					<div class="closebox">
+						<img src="../img/cuowu-@2x.png" />
+					</div>
+				</div>
+
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<p>类名 <span>高速钢钢板钻</span></p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<p>柄型<span>直角柄</span></p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<p>切深D.O.C<span>25mm、30mm、35mm</span></p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<p>直径<span>12.00mm~150.00mm</span></p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell">
+
+				</div>
+			</div>
+		</div>
+		<div id="changeOptions" class="weui-popup__container popup-bottom">
+			<!--弹层  popup-bottom 这个Class从底部拉起的非全屏弹层  去掉就是全屏-->
+			<div class="weui-popup__overlay">
+				<!-- 遮罩 -->
+			</div>
+			<div class="weui-popup__modal">
+				<!-- 内容 -->
+
+				<div class="changebox">
+					<div class="change-msg">
+						<div class="change-title">
+							<p>选择规格参数</p>
+							<a href="javascript:closePop();" class="closebtn">
+								<img src="../img/cuowu-@2x.png" />
+							</a>
+						</div>
+						<div class="change-line">
+							<h5>切深</h5>
+							<div class="change-items">
+								<div class="changeitem active">
+									25mm
+								</div>
+								<div class="changeitem">
+									25mm
+								</div>
+								<div class="changeitem">
+									25mm
+								</div>
+							</div>
+						</div>
+						<div class="change-line">
+							<a href="javascript:$('#picker-length').click();" class="weui-cell weui-cell_access weui-cell_link">
+								<div class="weui-cell__bd">直径<em class="unit">(mm)</em></div>
+								<span class="weui-cell__ft">
+									<span class="selectnum" style="color: #F7363B;">13.5</span>
+								</span>
+								<input type="hidden" name="" id="picker-length" value="" />
+							</a>
+						</div>
+						<div class="change-line">
+							<div class="weui-cell weui-cell_link">
+								<div class="weui-cell__bd">商品号直径<em class="unit">(长按复制)</em></div>
+								<span class="weui-cell__ft">
+									<span class="proid">123465</span>
+								</span>
+							</div>
+						</div>
+						<div class="change-line">
+							<div class="weui-cell weui-cell_link pronum">
+								<div class="weui-cell__bd">数量</div>
+								<div class="weui-cell__ft">
+									<div class="it-right">
+										<i class="minus"></i>
+										<input type="tel" id="" maxlength="2" value="" class="number" />
+										<i class="add"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="change-btns">
+						<a class="change-child-btn add_car">加入购物车</a>
+						<a class="change-child-btn add_car">立即购买</a>
+						<a class="change-child-btn add_buy" style="display: none;">确认</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/video.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				var mySwiper = new Swiper('.swiper-container', {
+					// Optional parameters
+					direction: 'horizontal',
+					loop: true,
+					autoplay: 5000, //可选选项，自动滑动
+					pagination: '.swiper-pagination',
+				});
+				if(GetQueryString("formJifen") == 1) {
+					$(".body").addClass("hadduihuan");
+				} else if(GetQueryString("formJifen") == 0) {
+					$(".body").addClass("from_index");
+					var obj = $('.change-btns').clone();
+					obj.children('.change-child-btn').attr("href", "javascript:prop('#changeOptions');");
+					obj.children('.add_buy').attr("href", "javascript:closePop();");
+					$(".duihuanbtn").html(obj)
+				}
+				setFromPrice();
+				var myPlayer = videojs('myVideo');
+				videojs("myVideo").ready(function() {
+					var myPlayer = this;
+					//					myPlayer.play();
+				});
+			})
+
+			function setFromPrice() {
+				$("#picker-length").picker({
+					title: "请选择直径",
+					cols: [{
+							textAlign: 'center',
+							values: [10, 11, 12, 13, 14, 15]
+							//如果你希望显示文案和实际值不同，可以在这里加一个displayValues: [.....]
+						},
+						{
+							textAlign: 'center',
+							values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+						},
+						{
+							textAlign: 'center',
+							values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+						}
+					],
+					onChange: function(e, i) {
+						//console.log(e);
+						$('.toolbar .title').text("已选择：" + i[0] + '.' + i[1] + i[2]);
+						//console.log(i);
+						$(".selectnum").text(i[0] + '.' + i[1] + i[2]);
+					},
+					toolbarTemplate: '<div class="toolbar">          <div class="toolbar-inner">          <a href="javascript:;" class="picker-button close-picker"><img src="../img/lefticon@2x.png"/></a>          <h1 class="title">{{title}}</h1>          </div>          </div>'
+				});
+				calcFunc();
+				$(".changeitem").click(function() {
+					$(this).addClass("active").siblings(".changeitem").removeClass("active")
+				})
+				$('.likebtn').click(function() {
+					if($(this).hasClass("active")) {
+						$(this).removeClass("active")
+					} else {
+						$(this).addClass("active")
+					}
+				})
+			}
+
+			function closePop() {
+				$.closePopup();
+				$(".add_buy").hide();
+				$(".add_car").show();
+			}
+
+			function prop(obj) {
+				$(obj).popup();
+				$(".add_car").hide();
+				$(".add_buy").show();
+				$(".weui-popup__overlay").click(function(e) {
+					e.stopPropagation();
+					closePop();
+				});
+			}
+		</script>
+	</body>
+
+</html>

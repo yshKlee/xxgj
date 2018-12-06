@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>个人信息</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mine.css" />
+		<style type="text/css">
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="body my_msg">
+
+			<div class="weui-cells">
+				<a href="javascript:;" class="weui-cell weui-cell_access">
+					<div class="weui-cell__hd"></div>
+					<div class="weui-cell__bd">
+						<p>头像</p>
+					</div>
+					<div class="weui-cell__ft"><img src="../img/toux@2x.png"></div>
+				</a>
+				<a href="javascript:;" class="weui-cell weui-cell_access">
+					<div class="weui-cell__hd"></div>
+					<div class="weui-cell__bd">
+						<p>姓名</p>
+					</div>
+					<div class="weui-cell__ft">宋威龙</div>
+				</a>
+			</div>
+			<div class="space"></div>
+			<div class="weui-cells">
+				<a href="y_mine_compeny.html" class="weui-cell weui-cell_access">
+					<div class="weui-cell__hd"></div>
+					<div class="weui-cell__bd">
+						<p>所在公司信息</p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</a>
+			</div>
+			<div class="space"></div>
+			<div class="weui-cells">
+				<a href="y_mine_phone.html" class="weui-cell weui-cell_access">
+					<div class="weui-cell__hd"></div>
+					<div class="weui-cell__bd">
+						<p>手机号</p>
+					</div>
+					<div class="weui-cell__ft">18456935268</div>
+				</a>
+				<a href="y_mine_mail.html" class="weui-cell weui-cell_access">
+					<div class="weui-cell__hd"></div>
+					<div class="weui-cell__bd">
+						<p>邮箱</p>
+					</div>
+					<div class="weui-cell__ft">18456935268@163.com</div>
+				</a>
+			</div>
+			<div class="space"></div>
+			<div class="weui-cells">
+				<a href="y_mine_changepw.html?type=new" class="weui-cell weui-cell_access">
+					<div class="weui-cell__hd"></div>
+					<div class="weui-cell__bd">
+						<p>修改登录密码</p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</a>
+			</div>
+			<div class="space"></div>
+			<div class="weui-cells xiugai" style="display: none;">
+				<a href="y_mine_changepw.html?type=reset" class="weui-cell weui-cell_access">
+					<div class="weui-cell__hd"></div>
+					<div class="weui-cell__bd">
+						<p>修改支付密码</p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</a>
+			</div>
+			<div class="weui-cells shezhi">
+				<a href="y_mine_changepw.html?type=shezhi" class="weui-cell weui-cell_access">
+					<div class="weui-cell__hd"></div>
+					<div class="weui-cell__bd">
+						<p>设置支付密码</p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</a>
+			</div>
+		</div>
+
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				var num = sessionStorage.getItem("num");
+				if(num == 1){
+					$(".xiugai").show();
+					$(".shezhi").hide();
+				}else{
+		                var mid = "";
+		                var mum = "";
+			        	$.confirm("您还未设置过支付密码，是否立即设置？", "提示", function() {
+		                    window.location.replace("y_mine_changepw.html?type=shezhi");
+			        	}, function() {
+			          		//取消操作
+			        	});
+					$(".xiugai").hide();
+					$(".shezhi").show();
+				}
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<style type="text/css">
+			.shoplogo{
+				width: 30px;
+				height: 40px;
+				position: absolute;
+				top: 0;
+			}
+			.prolist a{
+				position: relative;
+			}
+			.shoplogo img{
+				width: 30px !important;
+				height: 40px !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="body">
+			<div class="weui-search-bar" id="searchBar">
+				<form class="weui-search-bar__form">
+					<div class="weui-search-bar__box">
+						<i class="weui-icon-search"></i>
+						<input type="search" onfocus="rep()" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+						<a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+					</div>
+					<!--<label class="weui-search-bar__label" id="searchText">
+				      <i class="weui-icon-search"></i>
+				      <span>搜索</span>
+				    </label>-->
+				</form>
+				<a href="message.html" class="weui-search-bar__cancel-btn msg-link" id="searchCancel">
+					<img src="../img/xuiaox@2x.png" />
+				</a>
+			</div>
+
+			<!-- Slider main container -->
+			<div class="swiper-container">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide"><img src="../img/banner@2x.png" /></div>
+					<div class="swiper-slide"><img src="../img/banner@2x.png" /></div>
+					<div class="swiper-slide"><img src="../img/banner@2x.png" /></div>
+					<div class="swiper-slide"><img src="../img/banner@2x.png" /></div>
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+
+			</div>
+			<div class="index-title">
+				<h4>推荐产品</h4>
+				<p class="line">RECOMMEND PRODUCTS</p>
+			</div>
+			<div class="showimg">
+				<img src="../img/tuijian@2x.png" alt="" />
+				<div class="linkbox">
+					<a href="list_tuijian.html">查看更多</a>
+				</div>
+			</div>
+			<div class="showimg" style="margin-top: 20px">
+				<h4><img src="../img/banner2.png" style="width: 100%" alt=""></h4>
+			</div>
+			
+			<div class="index-title index-title-chanp">
+				<h4>产品类别</h4>
+				<p class="line">PRODUCT CATEGORY</p>
+			</div>
+			<div class="prolist" style="padding-bottom: 60px;">
+				<a href="chanp.html">
+					<img src="../img/proitem.png" />
+					<div class="shoplogo" style="left: 0;">
+						<img src="../img/tubiao@2x.png" alt="" />
+					</div>
+					<span>
+						<!--bdaa88-->
+						<h5>高速钢钢板钻</h5>
+						<p>ANNULAR&nbsp;&nbsp;CUTTER</p>
+					</span>
+				</a>
+				<a href="chanp.html">
+					<img src="../img/proitem.png" />
+					<div class="shoplogo" style="right: 0;">
+						<img src="../img/tubiao@2x.png" alt="" />
+					</div>
+					<span>
+						<!--bdaa88-->
+						<h5>高速钢钢板钻</h5>
+						<p>ANNULAR&nbsp;&nbsp;CUTTER</p>
+					</span>
+				</a>
+				<a href="chanp.html">
+					<img src="../img/proitem.png" />
+					<div class="shoplogo" style="left: 0;">
+						<img src="../img/tubiao@2x.png" alt="" />
+					</div>
+					<span>
+						<!--bdaa88-->
+						<h5>高速钢钢板钻</h5>
+						<p>ANNULAR&nbsp;&nbsp;CUTTER</p>
+					</span>
+				</a>
+				<a href="chanp.html">
+					<img src="../img/proitem.png" />
+					<div class="shoplogo" style="right: 0;">
+						<img src="../img/tubiao@2x.png" alt="" />
+					</div>
+					<span>
+						<!--bdaa88-->
+						<h5>高速钢钢板钻</h5>
+						<p>ANNULAR&nbsp;&nbsp;CUTTER</p>
+					</span>
+				</a>
+			</div>
+			<div class="weui-loadmore">
+			  	<i class="weui-loading"></i>
+			  	<span class="weui-loadmore__tips">正在加载</span>
+			</div>
+		</div>
+		<div id="footer"></div>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("#footer").load("footer.html", function() {
+				var item = $("#footer").find(".weui-tabbar__item").eq(0);
+				formatIconStyle(item);
+			});
+			$(function() {
+				var mySwiper = new Swiper('.swiper-container', {
+					// Optional parameters
+					direction: 'horizontal',
+					loop: true,
+					autoplay: 5000, //可选选项，自动滑动
+					pagination: '.swiper-pagination',
+				})
+			})
+			
+			
+		      var loading = false;
+		      $(document.body).infinite().on("infinite", function() {
+		        if(loading) return;
+		        loading = true;
+		        setTimeout(function() {
+		          $(".prolist").append('<a href="chanp.html"><img src="../img/proitem.png" /><div class="shoplogo" style="left: 0;"><img src="../img/tubiao@2x.png" alt="" /></div><span><h5>高速钢钢板钻</h5><p>ANNULAR&nbsp;&nbsp;CUTTER</p></span></a><a href="chanp.html"><img src="../img/proitem.png" /><div class="shoplogo" style="right: 0;"><img src="../img/tubiao@2x.png" alt="" /></div><span><h5>高速钢钢板钻</h5><p>ANNULAR&nbsp;&nbsp;CUTTER</p></span></a>');
+		          loading = false;
+		        }, 2000);
+		      });
+    
+			
+			
+			function rep(){
+				window.location.href = "search.html";
+			}
+		</script>
+	</body>
+
+</html>

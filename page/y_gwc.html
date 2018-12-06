@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/gwc.css" />
+		<style type="text/css">
+			@media only screen and (min-width: 350px) {
+				.gwc_img {
+					width: 80px!important;
+					height: 80px!important;
+					line-height: 80px!important;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="body">
+			<div class="gwc">
+				<div class="weui-panel weui-panel_access">
+					<div class="weui-panel__hd">
+						<div class="checkbox" id="checkAll">
+							<input type="checkbox" name="" value="" />
+							<i></i>
+						</div>
+						<p class="checkAll">全选</p>
+						<div class="gwc-btns">
+							<a class="gwc-btn delbtn">删除</a>
+							<a class="gwc-btn changebtn">编辑</a>
+						</div>
+					</div>
+					<div class="weui-panel__bd">
+						<div class="weui-media-box weui-media-box_appmsg listitem">
+							<div class="weui-media-box__title">
+								<div class="checkbox splist">
+									<input type="checkbox" name="" id="" value="" />
+									<i></i>
+								</div>
+							</div>
+							<div class="weui-media-box__hd gwc_img" style="width: 70px;height: 70px;line-height: 70px;">
+								<img class="weui-media-box__thumb" src="../img/proitem.png">
+							</div>
+							<div class="weui-media-box__bd">
+								<h4>高速钢直角并钢板钻</h4>
+								<div class="canshu flex">
+									<p>规格参数：DNTC-3、35mm</p>
+									<a href="javascript:prop();">
+										<img src="../img/bianj'@2x.png" />
+									</a>
+								</div>
+								<div class="price flex">
+									<b>￥59</b>
+									<em>x2</em>
+									<div class="calcbox">
+										<div class="it-right">
+											<i class="minus"></i>
+											<input type="tel" id="" maxlength="2" value="2" class="number" />
+											<i class="add"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="weui-media-box weui-media-box_appmsg listitem">
+							<div class="weui-media-box__title">
+								<div class="checkbox splist">
+									<input type="checkbox" name="" id="" value="" />
+									<i></i>
+								</div>
+							</div>
+							<div class="weui-media-box__hd gwc_img" style="width: 70px;height: 70px;line-height: 70px;">
+								<img class="weui-media-box__thumb" src="../img/proitem.png">
+							</div>
+							<div class="weui-media-box__bd">
+								<h4>高速钢直角并钢板钻</h4>
+								<div class="canshu flex">
+									<p>规格参数：DNTC-3、35mm</p>
+									<a href="javascript:prop();">
+										<img src="../img/bianj'@2x.png" />
+									</a>
+								</div>
+								<div class="price flex">
+									<b>￥59</b>
+									<em>x2</em>
+									<div class="calcbox">
+										<div class="it-right">
+											<i class="minus"></i>
+											<input type="tel" id="" maxlength="2" value="2" class="number" />
+											<i class="add"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="paybox">
+				<div class="paymsg">
+					<span>合计：</span>
+					<b>￥118</b>
+				</div>
+				<a href="shoplist.html" class="paybtn">结算</a>
+			</div>
+		</div>
+		<div id="changeOptions" class="weui-popup__container popup-bottom">
+			<!--弹层  popup-bottom 这个Class从底部拉起的非全屏弹层  去掉就是全屏-->
+			<div class="weui-popup__overlay">
+				<!-- 遮罩 -->
+			</div>
+			<div class="weui-popup__modal">
+				<!-- 内容 -->
+
+				<div class="changebox">
+					<div class="change-msg">
+						<div class="change-title">
+							<p>选择规格参数</p>
+							<a href="javascript:closePop();" class="closebtn">
+								<img src="../img/cuowu-@2x.png" />
+							</a>
+						</div>
+						<div class="change-line">
+							<h5>切深</h5>
+							<div class="change-items">
+								<div class="changeitem active">
+									25mm
+								</div>
+								<div class="changeitem">
+									25mm
+								</div>
+								<div class="changeitem">
+									25mm
+								</div>
+							</div>
+						</div>
+						<div class="change-line">
+
+							<a href="javascript:$('#picker-length').click();" class="weui-cell weui-cell_access weui-cell_link">
+								<div class="weui-cell__bd">直径<em class="unit">(mm)</em></div>
+								<span class="weui-cell__ft">
+									<span class="selectnum">13.5</span>
+								</span>
+								<input type="hidden" name="" id="picker-length" value="" />
+							</a>
+
+						</div>
+						<div class="change-line">
+							<div class="weui-cell weui-cell_link">
+								<div class="weui-cell__bd">商品号直径<em class="unit">(长按复制)</em></div>
+								<span class="weui-cell__ft">
+									<span class="proid">123465</span>
+								</span>
+							</div>
+
+						</div>
+						<div class="change-line">
+							<div class="weui-cell weui-cell_link pronum">
+								<div class="weui-cell__bd">数量</div>
+								<div class="weui-cell__ft">
+									<div class="it-right">
+										<i class="minus"></i>
+										<input type="tel" id="" maxlength="2" value="2" class="number" />
+										<i class="add"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="change-btn" onclick="closePop()">
+						确认
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer"></div>
+
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("#footer").load("footer.html", function() {
+				var item = $("#footer").find(".weui-tabbar__item").eq(2);
+				formatIconStyle(item);
+			});
+
+			$("#picker-length").picker({
+				title: "请选择直径",
+				cols: [{
+						textAlign: 'center',
+						values: [10, 11, 12, 13, 14, 15]
+						//如果你希望显示文案和实际值不同，可以在这里加一个displayValues: [.....]
+					},
+					{
+						textAlign: 'center',
+						values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+					},
+					{
+						textAlign: 'center',
+						values: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+					}
+				],
+				onChange: function(e, i) {
+					console.log(e);
+					$('.toolbar .title').text("已选择：" + i[0] + '.' + i[1] + i[2]);
+					console.log(i)
+				},
+				toolbarTemplate: '<div class="toolbar">          <div class="toolbar-inner">          <a href="javascript:;" class="picker-button close-picker"><img src="../img/lefticon@2x.png"/></a>          <h1 class="title">{{title}}</h1>          </div>          </div>'
+			});
+			$(function() {
+				var mySwiper = new Swiper('.swiper-container', {
+					// Optional parameters
+					direction: 'horizontal',
+					loop: true,
+					autoplay: 5000, //可选选项，自动滑动
+					pagination: '.swiper-pagination',
+				})
+				$('.checkbox:not(#checkAll)').click(function() {
+					$(this).children("input[type='checkbox']").click();
+				})
+				$("#checkAll").click(function() {
+					$(this).children("input[type='checkbox']").click();
+					if($(this).children("input[type='checkbox']").prop("checked")) {
+						$("input[type='checkbox']").prop("checked", true);
+					} else {
+						$("input[type='checkbox']").prop("checked", false);
+					}
+				})
+				$(".changebtn").click(function() {
+					switch($(this).text()) {
+						case '编辑':
+							$(this).text('完成');
+							$(".delbtn").show();
+							$(".calcbox").show().siblings("em").hide();
+							break;
+						case '完成':
+							$(this).text('编辑');
+							$(".delbtn").hide();
+							$(".calcbox").hide().siblings("em").show();
+							break;
+						default:
+							break;
+					}
+
+				});
+				
+				
+				var MAX = 99, MIN = 1;
+	      		$('.minus').click(function (e) {
+		        	var $input = $(e.currentTarget).parent().find('.number');
+		        	var number = parseInt($input.val() || "0") - 1
+		        	if (number < MIN) number = MIN;
+		        	$input.val(number)
+		      	})
+		      	$('.add').click(function (e) {
+		        	var $input = $(e.currentTarget).parent().find('.number');
+		        	var number = parseInt($input.val() || "0") + 1
+		        	if (number > MAX) number = MAX;
+		        	$input.val(number)
+		      	})
+				
+				$(".delbtn").click(function() {
+					$(".splist input[type='checkbox']:checked").parents(".listitem").remove();
+				});
+				calcFunc();
+				$(".changeitem").click(function() {
+					$(this).addClass("active").siblings(".changeitem").removeClass("active")
+				})
+			})
+
+			function prop() {
+				$("#changeOptions").popup();
+
+			}
+
+			function closePop() {
+				$.closePopup();
+			}
+		</script>
+	</body>
+
+</html>

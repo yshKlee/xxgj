@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>我的余额</title>
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mine.css" />
+		<style type="text/css">
+			
+		</style>
+	</head>
+
+	<body>
+
+		<div class="body my_point mycoins">
+			<div class="pointbg">
+				<p>余额（元）</p>
+				<h2>2000</h2>
+				<a href="javascript:;">余额说明</a>
+			</div>
+			<div class="weui-cells">
+
+				<div class="weui-cell weui-cell_access" onclick="paymoney()">
+					<div class="weui-cell__hd"></div>
+					<div class="weui-cell__bd">
+						<p>充值</p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+
+			</div>
+
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						积分明细<em>（半年内）</em>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"></div>
+					<div class="weui-cell__bd">
+						<p>商城积分</p>
+						<p>2017/12/18 20:35</p>
+					</div>
+					<div class="weui-cell__ft"><b>+20</b></div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"></div>
+					<div class="weui-cell__bd">
+						<p>兑换商品</p>
+						<p>2017/12/18 20:35</p>
+					</div>
+					<div class="weui-cell__ft"><b>-2000</b></div>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+
+			})
+			
+			function paymoney(){
+				window.location.href="y_mine_chargecoins.html";
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>更换支付密码</title>
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mine.css" />
+		<style type="text/css">
+			#reset,
+			#new,
+			#shezhi{
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="body my_msg" id="shezhi">
+
+			<!--<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label for="" class="weui-label">原密码</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="password" placeholder="请输入原支付密码">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+
+			</div>
+			<div class="space"></div>-->
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label for="" class="weui-label">支付密码</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="password" placeholder="请输入支付密码 (6位)">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label for="" class="weui-label">确认密码</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="password" placeholder="请再次输入支付密码">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+			</div>
+			<!--<div class="tipbox">
+				<div class="weui-cells__tips">如无法自助修改，请点击 <em class="active">联系客服</em> 申请客服协助</div>
+			</div>-->
+
+		</div>
+		<div class="body my_msg" id="reset">
+
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label for="" class="weui-label">原密码</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="password" placeholder="请输入原支付密码">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+
+			</div>
+			<div class="space"></div>
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label for="" class="weui-label">支付密码</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="password" placeholder="请输入支付密码 (6位)">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label for="" class="weui-label">确认密码</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="password" placeholder="请再次输入支付密码">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+			</div>
+			<div class="tipbox">
+				<div class="weui-cells__tips">如无法自助修改，请点击 <em class="active">联系客服</em> 申请客服协助</div>
+			</div>
+
+		</div>
+		<div class="body my_msg" id="new">
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label for="" class="weui-label">原密码</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="password" placeholder="请输入原登陆密码">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+
+			</div>
+			<div class="space"></div>
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label for="" class="weui-label">新密码</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="password" placeholder="请输入新密码">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label for="" class="weui-label">确认密码</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="password" placeholder="请再次输入新密码">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+			</div>
+			<div class="tipbox">
+				<div class="weui-cells__tips">如无法自助修改，请点击 <em class="active">联系客服</em> 申请客服协助</div>
+			</div>
+
+		</div>
+
+		<a href="javascript:;" class="subbtn">
+			确认
+		</a>
+
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#"+GetQueryString("type")).show();
+			})
+			
+			var tp = GetQueryString("type");
+			if(tp == "shezhi"){
+				$(".subbtn").click(function(){
+					sessionStorage.setItem("num","1");
+					alert("设置成功!!!");
+					window.location.replace("y_mine_msg.html");
+				})
+			}
+			
+		</script>
+	</body>
+
+</html>

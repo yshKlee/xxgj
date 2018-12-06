@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>余额充值</title>
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mine.css" />
+		<style type="text/css">
+			.mycoins .weui-cell__hd img {
+				width: 24px;
+				height: 26px;
+				margin-right: 15px;
+			}
+			
+			.mycoins .weui-cells__title {
+				background: #FFFFFF;
+				margin-bottom: 0;
+				padding: 20px 15px;
+				font-size: 15px;
+			}
+			
+			.mycoins .weui-cells__title+.weui-cells:before {
+				content: none;
+			}
+			
+			.charge .weui-label {
+				width: 20px;
+			}
+			
+			.charge .weui-input {
+				font-size: 40px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="body my_point mycoins">
+			<div class="weui-cells" style="margin: 0;">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><img src="../img/weixin@2x.png"></div>
+					<div class="weui-cell__bd">
+						<p>微信支付</p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+			</div>
+			<div class="weui-cells__title">充值金额(元)</div>
+			<div class="weui-cells" style="margin: 0;">
+				<div class="weui-cell charge">
+					<div class="weui-cell__hd"><label for="" class="weui-label ">￥</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" value="2000" type="text" placeholder="">
+					</div>
+				</div>
+			</div>
+			<a href="paysuccess.html?type=success" class="msgbox_btn">
+				立即充值
+			</a>
+		</div>
+
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+
+			})
+		</script>
+	</body>
+
+</html>

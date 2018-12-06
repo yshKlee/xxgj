@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>所在公司信息</title>
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mine.css" />
+		<style type="text/css">
+			
+		</style>
+	</head>
+
+	<body>
+
+		<div class="body my_msg">
+			<div class="tipbox">
+				<div class="weui-cells__tips">更换手机后，下次登录使用新手机号</div>
+				<div class="weui-cells__tips">当前手机号：18759635286</div>
+			</div>
+
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label for="" class="weui-label">新手机号</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" id="phone" value="18568459623" placeholder="请输入公司名称">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell weui-cell_vcode">
+					<div class="weui-cell__hd">
+						<label class="weui-label">验证码</label>
+					</div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" value="886828" type="tel" placeholder="请输入验证码">
+					</div>
+					<div class="weui-cell__ft">
+						<button id="sendVerifyCode" class="weui-vcode-btn my_vbtn">发送验证</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<a href="javascript:;" class="subbtn">
+			确认更换
+		</a>
+
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#sendVerifyCode').click(timerOut);
+			})
+
+			function timerOut() {
+
+				if(!checkPhone($('#phone').val())) {
+					alert("请输入正确的手机号！");
+					return;
+				}
+				$(this).unbind("click");
+				sendVerifyCode();
+				var timer;
+				var asd = 60;
+				/* 更改样式  */
+				$(this).attr('disabled', 'disabled');
+				$(this).text(asd + "s后再试");
+				$(this).css({
+					"color": "#333333",
+					"background": "#e1e1e1"
+				});
+
+				//			定时器和计时器
+				timer = setInterval(function() {
+					asd--;
+					$('#sendVerifyCode').text(asd + "s后再试");
+
+				}, 1000);
+				setTimeout(function() {
+					clearInterval(timer);
+					/* 还原样式 */
+					$('#sendVerifyCode').removeAttr('disabled');
+					$('#sendVerifyCode').text("获取验证码");
+					$('#sendVerifyCode').css({
+						"color": "#FFFFFF",
+						"background": "none"
+					});
+					$('#sendVerifyCode').click(timerOut);
+				}, asd * 1000);
+			}
+
+			function sendVerifyCode() {
+
+			}
+		</script>
+	</body>
+
+</html>

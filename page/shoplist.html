@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>商品订单详情</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/order.css" />
+		<style type="text/css">
+			.shopemail .appimg .weui-media-box__hd{
+			    width: 18px !important;
+				height: 60px !important;
+				line-height: inherit;
+			}
+			.foot{
+				position: fixed;
+				width: 100%;
+				height: 50px;
+				background-color: #FFFFFF;
+				border-top: 1px solid #e0e0e0;
+				bottom: 0;
+				z-index: 999;
+				line-height: 50px;
+			}
+			.nocontent .weui-cell:before{
+				content: none !important;
+			}
+			.be:before,.fpinfo:before{
+				content: none;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="body prodetail" style="padding-bottom: 60px;">
+			<div class="weui-panel weui-panel_access proitem">
+
+				<div class="weui-panel__bd">
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__hd">
+							<img class="titleicon" style="height: 19px;width: 14px;" src="../img/dw@2x.png">
+						</div>
+						<div class="weui-media-box__bd nocontent">
+							<div class="proaddress">
+								<h4>收货人：小芒果Vicky</h4> <em class="">187123456789</em>
+							</div>
+							<a style="padding:5px 0;" class="weui-cell weui-cell_access" href="address_list.html">
+					            <div class="weui-cell__bd">
+					              	<p>浙江省杭州市拱墅区登云路518号西城商务时代中心1幢楼15楼1幢15楼杭州会有科技有限公司</p>
+					            </div>
+					            	<div class="weui-cell__ft">
+					            </div>
+					       </a>
+						</div>
+					</div>
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__title">
+							<img style="margin-top: 15px;" class="titleicon" src="../img/ps@2x.png">
+						</div>
+						<div class="weui-media-box__bd">
+							<div class="proaddress">
+								<span>配送方式</span> <em class="addressem" style="display: none;">配送方式</em>
+								<div class="weui-cell weui-cell_access" style="width: 67% !important;">
+									<a style="padding: 0;" class="weui-cell weui-cell_access" href="setwuliu.html">
+							            <div class="weui-cell__bd">
+							              	<p style="text-align: right;">默认运输</p>
+							            </div>
+							            	<div class="weui-cell__ft">
+							            </div>
+							       </a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="weui-panel weui-panel_access my_panel shopemail">
+
+				<div class="weui-panel__bd">
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__hd">
+							<img class="weui-media-box__thumb" src="../img/proitem.png">
+						</div>
+						<div class="weui-media-box__bd">
+							<h4>高速钢直角并钢板钻</h4>
+							<p>规格参数：DNTC-3、35mm</p>
+							<b>￥188</b>
+						</div>
+					</div>
+					<div class="weui-cells">
+			          	<div class="weui-cell">
+			            	<div class="weui-cell__bd">
+			              		<p>数量</p>
+			            	</div>
+			            	<div class="weui-cell__ft">
+				              	<div class="weui-count">
+					                <a class="weui-count__btn weui-count__decrease"></a>
+					                <input class="weui-count__number" type="number" value="1">
+					                <a class="weui-count__btn weui-count__increase"></a>
+				              	</div>
+			            	</div>
+			          	</div>
+			        </div>
+			        <!--<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__bd">
+							<div class="proaddress">
+								<h4>运费</h4> <em class="">￥5</em>
+							</div>
+						</div>
+					</div>-->
+					<div class="weui-media-box weui-media-box_appmsg be">
+						<div class="weui-media-box__bd">
+							<div class="proaddress">
+								<h4>总价</h4> <em class="">￥376</em>
+							</div>
+							<div class="proaddress">
+								<h4>运费</h4> <em class="">￥5</em>
+							</div>
+						</div>
+					</div>
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__bd">
+							<div class="proaddress">
+								<h4>共2件商品</h4> <em class="">合计：￥381</em>
+							</div>
+						</div>
+					</div>
+					<div class="weui-cells weui-cells_form">
+				      	<div class="weui-cell weui-cell_switch">
+				        	<div class="weui-cell__bd">开票</div>
+				        	<div class="weui-cell__ft">
+				          		<label for="switchCP" class="weui-switch-cp">
+				            		<input id="switchCP" class="weui-switch-cp__input" type="checkbox" checked="checked">
+				            		<div class="weui-switch-cp__box"></div>
+				          		</label>
+				        	</div>
+				      	</div>
+				    </div>
+					<div class="weui-media-box weui-media-box_appmsg appimg fapiao">
+						<div class="weui-media-box__hd">
+							<img class="titleicon" src="../img/fp@2x.png">
+						</div>
+						<div class="weui-media-box__bd ">
+							<div class="proaddress">
+								<h4>发票信息</h4> <em class="">增值税普通发票</em>
+							</div>
+							<a style="padding: 0;" class="weui-cell weui-cell_access fpinfo" href="y_mine_invoice.html">
+					            <div class="weui-cell__bd">
+					              	<p>发票抬头：杭州会友科技有限公司</p>
+					              	<p>纳税人识别号：85469214585855</p>
+					            </div>
+					            	<div class="weui-cell__ft">
+					            </div>
+					        </a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">备注：</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="number" pattern="[0-9]*" placeholder="添加备注信息（选填）">
+					</div>
+				</div>
+			</div>-->
+			<div class="foot">
+				<span style="margin-left: 20px;">合计 <span class="price" style="color: #FE6215;">￥6000</span></span>
+				<a class="right" href="pay_type.html" style="width: 40%;height: 50px;background-color: #FE5E11;color: #FFFFFF;display: inline-block;text-align: center;">提交订单</a>
+			</div>
+		</div>
+
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				//				switch (GetQueryString("orderType")){
+				//					case '1':
+				//						break;
+				//					default:
+				//						break;
+				//				}
+				if(GetQueryString("orderType")) {
+					$(".orderdetail-" + GetQueryString("orderType")).show();
+				}
+
+			})
+			var MAX = 99, MIN = 1;
+	      	$('.weui-count__decrease').click(function (e) {
+	        	var $input = $(e.currentTarget).parent().find('.weui-count__number');
+	        	var number = parseInt($input.val() || "0") - 1
+	        	if (number < MIN) number = MIN;
+	        	$input.val(number)
+	      	})
+	      	$('.weui-count__increase').click(function (e) {
+	        	var $input = $(e.currentTarget).parent().find('.weui-count__number');
+	        	var number = parseInt($input.val() || "0") + 1
+	        	if (number > MAX) number = MAX;
+	        	$input.val(number)
+	      	})
+	      	$('.delete-swipeout').click(function () {
+	        	$(this).parents('.weui-cell').remove()
+	      	})
+	      	$('.close-swipeout').click(function () {
+	        	$(this).parents('.weui-cell').swipeout('close')
+	      	})
+	      	
+	      	$("input[type='checkbox']").click(function(){
+	      		if($("input[type='checkbox']").is(':checked')){
+	      			$(".fapiao").show();
+	      		}else{
+	      			$(".fapiao").hide();
+	      		}
+	      	})
+		</script>
+	</body>
+</html>

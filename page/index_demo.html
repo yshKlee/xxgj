@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<style type="text/css">
+			
+			.weui-flex {
+				margin-top: 30px;
+			}
+			
+			#sliderValue {
+				color: #333333;
+				text-align: center;
+				font-size: 12px;
+				line-height: 2;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="weui-tab">
+			<div class="weui-tab__bd">
+				<div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+					<h1>页面一</h1>
+
+					<a href="javascript:prop();" class="weui-btn weui-btn_primary">按钮</a>
+
+					<div class="weui-flex">
+						<div class="weui-flex__item">
+							<a href="javascript:prop();" class="weui-btn weui-btn_primary">按钮</a>
+						</div>
+						<div class="weui-flex__item">
+							<a href="javascript:prop();" class="weui-btn weui-btn_primary">按钮</a>
+						</div>
+						<div class="weui-flex__item">
+							<a href="javascript:prop();" class="weui-btn weui-btn_primary">按钮</a>
+						</div>
+						<div class="weui-flex__item">
+							<a href="javascript:prop();" class="weui-btn weui-btn_primary">按钮</a>
+						</div>
+					</div>
+
+					<!--slider-->
+					<div class="weui-flex">
+						<div class="weui-flex__item">
+							<!--  -->
+							<div class="weui-slider" id="slider">
+								<div class="weui-slider__inner">
+									<div style="width: 30%;" class="weui-slider__track"></div>
+									<div style="left: 30%;" id="sliderValue" class="weui-slider__handler"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tab2" class="weui-tab__bd-item">
+					<div class="weui-cells weui-cells_form">
+						<div class="weui-cell">
+							<div class="weui-cell__hd"><label for="date" class="weui-label">请选择省</label></div>
+							<div class="weui-cell__bd">
+								<input class="weui-input" id="province-picker" type="text" value="" readonly="请选择省">
+							</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__hd"><label for="name" class="weui-label">请选择省市</label></div>
+							<div class="weui-cell__bd">
+								<input type="text" class="weui_input" id="city-picker" type="tel" placeholder="请选择省市">
+							</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__hd"><label for="name" class="weui-label">请选择省市区</label></div>
+							<div class="weui-cell__bd">
+								<input type="text" class="weui_input" id="city-picker2" type="tel" placeholder="请选择省市区">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<div id="tab3" class="weui-tab__bd-item">
+					<div class="weui-panel weui-panel_access my_panel">
+						
+						<div class="weui-panel__bd">
+							<a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+								<div class="weui-media-box__hd">
+									<img class="weui-media-box__thumb" src="">
+								</div>
+								<div class="weui-media-box__bd">
+									<h4 class="weui-media-box__title">标题一</h4>
+									<p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+								</div>
+							</a>
+							<a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+								<div class="weui-media-box__hd">
+									<img class="weui-media-box__thumb" src="">
+								</div>
+								<div class="weui-media-box__bd">
+									<h4 class="weui-media-box__title">标题二</h4>
+									<p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+								</div>
+							</a>
+						</div>
+						<!--<div class="weui-panel__ft">
+							<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link">
+								<div class="weui-cell__bd">查看更多</div>
+								<span class="weui-cell__ft"></span>
+							</a>
+						</div>-->
+					</div>
+				</div>
+				<div id="tab4" class="weui-tab__bd-item">
+					<h1>页面四</h1>
+				</div>
+			</div>
+
+			<div class="weui-tabbar">
+				<a href="#tab1" class="weui-tabbar__item weui-bar__item--on">
+					<span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span>
+					<div class="weui-tabbar__icon">
+
+					</div>
+					<p class="weui-tabbar__label">微信</p>
+				</a>
+				<a href="#tab2" class="weui-tabbar__item">
+					<div class="weui-tabbar__icon">
+
+					</div>
+					<p class="weui-tabbar__label">通讯录</p>
+				</a>
+				<a href="#tab3" class="weui-tabbar__item">
+					<div class="weui-tabbar__icon">
+
+					</div>
+					<p class="weui-tabbar__label">发现</p>
+				</a>
+				<a href="#tab4" class="weui-tabbar__item">
+					<div class="weui-tabbar__icon">
+
+					</div>
+					<p class="weui-tabbar__label">我</p>
+				</a>
+			</div>
+		</div>
+		<div id="about" class="weui-popup__container popup-bottom">
+			<!--弹层  popup-bottom 这个Class从底部拉起的非全屏弹层  去掉就是全屏-->
+			<div class="weui-popup__overlay">
+				<!-- 遮罩 -->
+			</div>
+			<div class="weui-popup__modal">
+				<!-- 内容 -->
+				你的内容放在这里...
+			</div>
+		</div>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function prop() {
+				$("#about").popup();
+			}
+			$(function(e) {
+				console.log(e.rawCitiesData);
+				var provinceData = e.rawCitiesData.map(function(item) {
+					return {
+						title: item.name,
+						value: item.code
+					};
+				})
+				console.log(provinceData)
+				//初始化滚动
+				$('#slider').slider(function(percent) {
+					console.log(percent);
+					//$("#sliderValue").text(percent)
+				});
+
+				$("#province-picker").select({
+					//					showDistrict: false,
+					toolbarCloseText: "",
+					title: "",
+					toolbarTemplate: '<div class="toolbar"><div class="toolbar-inner"><a href="javascript:;" class="picker-button "> 省份  </a>      <h1 class="title">{{title}}</h1><a href="javascript:$(\'#city-picker\').picker(\'close\');" class="picker-button close-select picker-check"> 取消 </a>       </div>      </div>',
+					items: provinceData
+				});
+				$("#city-picker").cityPicker({
+					showDistrict: false,
+					toolbarCloseText: "",
+					title: "",
+					toolbarTemplate: '<div class="toolbar"><div class="toolbar-inner"><a href="javascript:;" class="picker-button close-select"> 省份  </a>      <h1 class="title">{{title}}</h1><a href="javascript:$(\'#city-picker\').picker(\'close\');" class="picker-button close-select picker-check"> 取消 </a>       </div>      </div>'
+				});
+				$("#city-picker2").cityPicker({
+					toolbarCloseText: "",
+					title: "",
+					toolbarTemplate: '<div class="toolbar"><div class="toolbar-inner"><a href="javascript:;" class="picker-button close-select"> 省份  </a>      <h1 class="title">{{title}}</h1><a href="javascript:$(\'#city-picker\').picker(\'close\');" class="picker-button close-select picker-check"> 取消 </a>       </div>      </div>'
+				});
+			})
+		</script>
+	</body>
+
+</html>

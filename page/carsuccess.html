@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>提示</title>
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mine.css" />
+		<style type="text/css">
+			
+		</style>
+	</head>
+
+	<body>
+
+		<div class="body my_msg">
+			<div class="msgbox">
+				<img src="../img/cj@2x.png" />
+				<p class="msgbox_p">支付成功</p>
+				<div class="msgbox_btn">
+					返回5S
+				</div>
+			</div>
+
+		</div>
+
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				var num = 5;
+				var myinterval= setInterval(function() {
+					num = num - 1;
+					if(num > 0) {
+						$(".msgbox_btn").text('返回' + num + "S");	
+					}else {
+						clearInterval(myinterval);
+						window.location.href="y_gwc.html";
+					}
+					
+				}, 1000);
+			})
+		</script>
+	</body>
+
+</html>

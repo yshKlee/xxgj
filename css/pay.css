@@ -1,0 +1,78 @@
+.paybtns {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 49px;
+	border-top: 1px solid #d2d2d2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #FFFFFF;
+}
+
+.paymsg {
+	flex: 2;
+	margin-left: 15px;
+	font-size: 15px;
+}
+
+.paymsg b {
+	color: #ec6200;
+	font-weight: normal;
+	font-size: 18px;
+}
+
+.paybtn {
+	flex: 1;
+	height: 49px;
+	line-height: 49px;
+	text-align: center;
+	color: #FFFFFF;
+	background: #EC6200;
+}
+
+.delbtn {
+	background: #ffa200;
+}
+
+.pay {
+	background: #F5F5F5;
+}
+
+.pay_box {
+	width: calc(100% - 30px);
+	padding: 10px 15px;
+	background: #FFFFFF;
+	font-size: 15px;
+}
+
+.pay_box+.pay_box {
+	margin-top: 10px;
+}
+
+.pay_body {
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+	color: #999999;
+}
+
+.selectitem {
+	width: 81px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #999999;
+	border-radius: 3px;
+}
+
+.selectitem.active {
+	color: #EC6200;
+	border: 1px solid #EC6200;
+}
+
+.selectitem+.selectitem {
+	margin-left: 15px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>选择支付方式</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/pay.css" />
+		<style type="text/css">
+			
+		</style>
+	</head>
+
+	<body>
+
+		<div class="body pay">
+			<div class="pay_box">
+				<div class="pay_title">
+					结算方式
+				</div>
+				<div class="pay_body">
+					<div class="selectitem active">
+						线上支付
+					</div>
+					<div class="selectitem">
+						线下支付
+					</div>
+				</div>
+			</div>
+			<div class="pay_box">
+				<div class="pay_title">
+					支付方式
+				</div>
+				<div class="pay_body">
+					<div class="selectitem">
+						微信
+					</div>
+					<div class="selectitem active">
+						余额支付
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="paybtns">
+			<div class="paymsg">
+				<span>合计：</span>
+				<b>￥376</b>
+			</div>
+			<a href="javascript:void(0);" class="paybtn">确认支付</a>
+		</div>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.checkbox:not(#checkAll)').click(function() {
+					$(this).children("input[type='checkbox']").click();
+				});
+				$(".selectitem").click(function() {
+					$.hideLoading();
+					$(this).addClass("active").siblings().removeClass("active");
+				});
+			});
+			
+			$(".paybtn").click(function(){
+				window.location.replace("paysuccess.html");
+			})
+		</script>
+	</body>
+
+</html>

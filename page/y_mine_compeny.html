@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>所在公司信息</title>
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mine.css" />
+		<style type="text/css">
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="body my_msg">
+
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label for="" class="weui-label">公司名称</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" value="杭州会友科技有限公司" placeholder="请输入公司名称">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label for="" class="weui-label">联系方式</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" value="18568459623" pattern="[0-9]*" placeholder="请输入联系方式">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell weui-cell_access city-picker" data-open="0">
+					<div class="weui-cell__hd"><label for="" class="weui-label">公司地址</label></div>
+					<div class="weui-cell__bd">
+						<input type="text" class="weui-input" value="浙江省 杭州市 拱墅区" id="city-picker2" type="tel" placeholder="请选择省市区">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label for="" class="weui-label">详细地址</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" value="登云路518号" placeholder="请输入详细地址">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+			</div>
+		</div>
+		<a href="javascript:;" class="subbtn">
+			保存
+		</a>
+
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				$("#city-picker2").cityPicker({
+					toolbarCloseText: "",
+					title: "",
+					toolbarTemplate: '<div class="toolbar"><div class="toolbar-inner">      <h1 class="title">{{title}}</h1><a href="javascript:$(\'#city-picker2\').picker(\'close\');" class="picker-button close-select picker-check"> 确定 </a>       </div>      </div>',
+					onChange: function(a, b, c) {
+						//						console.log(a);
+						//						console.log(b);
+						//						console.log(c);
+					},
+					onClose: function() {
+						$(".city-picker").attr("data-open", "0");
+					}
+				});
+
+				$(".city-picker").click(function(e) {
+					e.stopPropagation();
+					if($(this).attr("data-open") == "0") {
+						$("#city-picker2").picker("open");
+						$(this).attr("data-open", "1");
+					} else {
+						$("#city-picker2").picker("close");
+						$(this).attr("data-open", "0");
+					}
+
+				})
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+		<style type="text/css">
+			.weui-flex {
+				margin-top: 30px;
+			}
+			#sliderValue {
+				color: #333333;
+				text-align: center;
+				font-size: 12px;
+				line-height: 2;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="con">
+				<div class="weui-tab">
+					<div class="weui-tab__bd">
+						<div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+							<div class="weui-cells weui-cells_form">
+								<p style="padding: 10px 15px;" class="sheng">
+									<span style="text-align: left;">省份</span>
+									<span style="text-align: right;">v</span>
+								</p>
+								<div class="weui-cell">
+									<div class="weui-cell__bd">
+										<input style="border-bottom: 1px solid #ccc;" class="weui-input" id="province-picker"  type="text" value="" readonly="请选择省份" placeholder="请选择省份">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="info" style="margin-top: 5px;">
+					<p>公司名称</p>
+					<input type="text" id="comname" placeholder="请输入公司名称" />
+				</div>
+				<div class="info" style="margin-top: 20px;">
+					<p>姓名</p>
+					<input type="text" id="username" placeholder="请输入姓名" />
+				</div>
+				<div style="padding: 10px 15px;padding-top: 120px;">
+					<button class="btn_true" onclick="gonext()">下一步</button>
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(e) {
+				console.log(e.rawCitiesData);
+				var provinceData = e.rawCitiesData.map(function(item) {
+					return {
+						title: item.name,
+						value: item.code
+					};
+				})
+				console.log(provinceData)
+				//初始化滚动
+				$('#slider').slider(function(percent) {
+					console.log(percent);
+				});
+
+				$("#province-picker").select({
+					toolbarCloseText: "",
+					title: "",
+					toolbarTemplate: '<div class="toolbar"><div class="toolbar-inner"><a href="javascript:;" class="picker-button "> 省份  </a>      <h1 class="title">{{title}}</h1><a href="javascript:$(\'#city-picker\').picker(\'close\');" class="picker-button close-select picker-check"> 取消 </a>       </div>      </div>',
+					items: provinceData
+				});
+			})
+			
+			
+			function gonext(){
+				window.location.href="zhuce.html";
+			}
+		</script>
+	</body>
+
+</html>

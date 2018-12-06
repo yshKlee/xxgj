@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>登陆注册</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/main.css" />
+		<style type="text/css">
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="login">
+			<div class="container">
+				<div class="logo">
+					<img src="../img/logo@2x.png" alt="" />
+				</div>
+				<div class="login_form">
+					<div class="phone">
+						<p>手机号</p>
+						<input type="tel" id="phone" placeholder="+86 | 18714269875" />
+					</div>
+					<div class="mima">
+						<p>密码</p>
+						<input type="password" name="" id="password"/>
+						<a class="showimg" href="javascript:;"><img src="../img/yj1@2x.png" alt="" /><img src="../img/yj2@2x.png" style="display: none;" alt="" /></a>
+					</div>
+					<p><a href="javascript:;">忘记密码?</a></p>
+				</div>
+				<button class="btn_true" onclick="login()">登 陆</button>
+				<button class="btn_white" onclick="reg()">注 册</button>
+			</div>
+		</div>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var a = 1;
+			$(".showimg").click(function(){
+				$(this).find("img").toggle();
+				if(a == 1){
+					$("#password").prop("type","text");
+					a = 0;
+				}else if(a == 0){
+					$("#password").prop("type","password");
+					a = 1;
+				}
+			})
+			
+			function login(){
+				var phone = $("#phone").val();
+				var pasword = $("#password").val();
+			}
+		</script>
+	</body>
+
+</html>

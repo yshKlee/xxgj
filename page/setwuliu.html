@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>选择配送方式</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/wuliu.css" />
+
+		<style type="text/css">
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="body setwuliu">
+			<div class="weui-cells weui-cells_radio">
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<p>选择配送方式</p>
+					</div>
+
+				</div>
+				<label class="weui-cell weui-check__label" for="x11">
+				    <div class="weui-cell__bd">
+				    	<p>默认运输 <em>（满3000包邮）</em></p>
+				    </div>
+				    <div class="weui-cell__ft">
+				    	<input type="radio" class="weui-check" name="radio1" id="x11" checked="checked">
+				    	<span class="weui-icon-checked"><img src="../img/cj@2x.png"/></span>
+				    </div>
+				</label>
+				<label class="weui-cell weui-check__label" for="x12">
+				    <div class="weui-cell__bd">
+				    	<p>加急运输</p>
+				    </div>
+				    <div class="weui-cell__ft">
+				    	<input type="radio" name="radio1" class="weui-check" id="x12">
+				    	<span class="weui-icon-checked"><img src="../img/cj@2x.png"/></span>
+				    </div>
+				</label>
+			</div>
+			<div class="weui-cells weui-cells_radio">
+				<a href="setwuliuquestions.html" class="weui-cell weui-check__label" for="1231">
+				    <div class="weui-cell__bd">
+				    	<p>配送方式说明</p>
+				    </div>
+				    <div class="weui-cell__ft">
+				    	<input type="radio" name="qweqwqe" class="weui-check" id="1231" checked="checked">
+				    	<span class="weui-icon-checked"><img src="../img/yiwen@2x.png"/></span>
+				    </div>
+				</a>
+			</div>
+		</div>
+		<div class="setwuliubtn">
+			确认
+		</div>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+
+			})
+			$(".setwuliubtn").click(function(){
+				window.history.back();
+			})
+		</script>
+	</body>
+
+</html>

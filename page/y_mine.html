@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>我的</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mine.css"/>
+		<style type="text/css">
+			
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="body mine">
+
+			<div class="header-box">
+				<a href="y_mine_msg.html" class="header">
+					<div class="userheader">
+						<img src="../img/toux@2x.png" />
+					</div>
+					<h3>宋威龙</h3>
+					<p>18756935268</p>
+				</a>
+			</div>
+			<div class="clear"></div>
+
+			<div class="links">
+				<a href="y_mine_collect.html">
+					<img src="../img/aixin@2x.png" style="width: 20px;" />
+					<p>我的收藏</p>
+				</a>
+				<a href="y_mine_point.html">
+					<img src="../img/jifen@2x.png" style="width: 21px;" />
+					<p>我的积分</p>
+				</a>
+				<a href="y_mine_coins.html">
+					<img src="../img/qian@2x.png" style="width: 13px;" />
+					<p>我的余额</p>
+				</a>
+			</div>
+			<div class="space">
+
+			</div>
+			<div class="weui-cells">
+				<a href="y_mine_invoice.html" class="weui-cell weui-cell_access">
+					<div class="weui-cell__hd"><img src="../img/fapiao2@2x.png"></div>
+					<div class="weui-cell__bd">
+						<p>发票信息</p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</a>
+				<a href="address_list.html" class="weui-cell weui-cell_access">
+					<div class="weui-cell__hd"><img src="../img/dingwei@2x.png"></div>
+					<div class="weui-cell__bd">
+						<p>我的收货地址</p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</a>
+				<!--<a href="javascript:;" class="weui-cell weui-cell_access">
+					<div class="weui-cell__hd"><img src="../img/yihank@2x.png"></div>
+					<div class="weui-cell__bd">
+						<p>绑定银行卡</p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</a>-->
+				<a href="javascript:;" onclick="lianxi()" class="weui-cell weui-cell_access">
+					<div class="weui-cell__hd"><img src="../img/dianhua@2x.png"></div>
+					<div class="weui-cell__bd">
+						<p>联系客服</p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</a>
+				<a href="setting.html" class="weui-cell weui-cell_access">
+					<div class="weui-cell__hd"><img src="../img/shezhi@2x.png"></div>
+					<div class="weui-cell__bd">
+						<p>设置</p>
+					</div>
+					<div class="weui-cell__ft"></div>
+				</a>
+			</div>
+		</div>
+
+		<div id="footer"></div>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("#footer").load("footer.html", function() {
+				var item = $("#footer").find(".weui-tabbar__item").eq(4);
+				formatIconStyle(item);
+			});
+			
+			
+			function lianxi(){
+				$.confirm("400-826-999", "呼叫", function() {
+		          	window.location.href = "tel:400-826-999";
+		        }, function() {
+		          	//取消操作
+		        });
+			}
+			
+		
+		</script>
+	</body>
+
+</html>

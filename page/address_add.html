@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>新增收货地址</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/address.css" />
+		<style type="text/css">
+			
+		</style>
+	</head>
+
+	<body>
+
+		<div class="body address addr_add">
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">收货人</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="请填写收货人">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">联系电话</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="请填写联系方式">
+					</div>
+				</div>
+				<div class="weui-cell weui-cell_access city-picker" data-open="0">
+					<div class="weui-cell__hd"><label class="weui-label">所在地区</label></div>
+					<div class="weui-cell__bd">
+						<input type="text" class="weui_input" id="city-picker" type="tel" placeholder="请选择">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+						<textarea class="weui-textarea" placeholder="请填写详细地址" rows="3"></textarea>
+
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd">
+						<div class="checkbox">
+							<input type="checkbox" name="defaultAddress" id="defaultAddress" value="" />
+							<i></i>
+							<span>设为默认地址</span>
+						</div>
+					</div>
+					<div class="weui-cell__bd">
+						<!--<input class="weui-input" type="text" placeholder="请填写联系方式">-->
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="addressbtn">
+			添加
+		</div>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.checkbox:not(#checkAll)').click(function() {
+					$(this).children("input[type='checkbox']").click();
+				})
+				$("#city-picker").cityPicker({
+					toolbarCloseText: "",
+					title: "",
+					onChange: function(a, b, c) {
+						//						console.log(a);
+						//						console.log(b);
+						//						console.log(c);
+					},
+					onClose: function() {
+						$(".city-picker").attr("data-open", "0");
+					},
+					toolbarTemplate: '<div class="toolbar"><div class="toolbar-inner">      <h1 class="title">{{title}}</h1><a href="javascript:$(\'#city-picker\').picker(\'close\');" class="picker-button close-select picker-check"> 关闭 </a>       </div>      </div>'
+				});
+
+				$(".city-picker").click(function(e) {
+					e.stopPropagation();
+					if($(this).attr("data-open") == "0") {
+						$("#city-picker").picker("open");
+						$(this).attr("data-open", "1");
+					} else {
+						$("#city-picker").picker("close");
+						$(this).attr("data-open", "0");
+					}
+				})
+
+			})
+			$(".addressbtn").click(function(){
+				alert("添加成功！！！");
+				window.history.back();
+			})
+		</script>
+	</body>
+
+</html>

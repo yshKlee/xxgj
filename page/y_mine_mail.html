@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>更换邮箱</title>
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mine.css" />
+		<style type="text/css">
+			
+		</style>
+	</head>
+
+	<body>
+
+		<div class="body my_msg">
+			<div class="tipbox">
+				<div class="weui-cells__tips">当前邮箱：18759635286@163.com</div>
+			</div>
+			<div class="weui-cells">
+				<div class="weui-cell" id="addMail" style="display: none;">
+					<div class="weui-cell__hd"><label for="" class="weui-label">新邮箱</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" id="mail" placeholder="请输入新邮箱地址">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell weui-cell_vcode">
+					<div class="weui-cell__hd">
+						<label class="weui-label">验证码</label>
+					</div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" value="" type="tel" placeholder="请输入验证码">
+					</div>
+					<div class="weui-cell__ft">
+						<button id="sendVerifyCode" class="weui-vcode-btn my_vbtn">发送验证</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<a href="javascript:;" class="subbtn">
+			下一步
+		</a>
+
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".subbtn").click(next);
+			})
+			function next(){
+				$(".subbtn").text("确认");
+				$(".tipbox").hide();
+				$("#addMail").show();
+			}
+		</script>
+	</body>
+
+</html>

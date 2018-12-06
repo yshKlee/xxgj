@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>商品订单详情</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/wuliu.css" />
+		
+		<style type="text/css">
+			.track-list .top_7 .node-icon{
+				top: -7px !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="body ">
+
+			<div class="weui-panel weui-panel_access wuliu">
+				<div class="weui-panel__bd">
+					<div class="weui-media-box weui-media-box_appmsg">
+						<div class="weui-media-box__hd">
+							<img class="weui-media-box__thumb" src="../img/proitem.png">
+						</div>
+						<div class="weui-media-box__bd">
+							<h4>已签收</h4>
+							<p>申通快递:330564846518</p>
+							<p>官方电话:
+								<a href="tel:95543">95543</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label"><img src="../img/sendman.png"/></label></div>
+					<div class="weui-cell__bd">
+						<h5 class="name">霍敏</h5>
+						<a href="tel:13388609765">13388609765</a>
+					</div>
+					<div class="weui-cell__ft">
+						<a href="javascript:;" class="pjbtn">
+							评价小件员
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="track-list">
+				<ul>
+					<li>
+						<i class="node-icon"><img src="../img/dingwei2@2x.png" alt="" /></i>
+						<div class="txt">[收货地址]浙江省行杭州市拱墅区祥符街道登云路518号西城时代商务中心1幢15楼杭州会有科技有限公司</div>
+					</li>
+					<li class="nowaddress top_7">
+						<i class="node-icon"><img src="../img/cj@2x.png" alt="" /></i>
+						<span class="time"><em>01-10</em><em>07:51</em></span>
+						<div class="txt">
+							<h5>已签收</h5>
+							<p>已签收，签收人是本人签收</p>
+						</div>
+					</li>
+					<li class="top_7">
+						<!--物流信息向上的箭头用这个class-->
+						<i class="node-icon"><span class="wuliu-icon"></span></i>
+						<span class="time"><em>01-10</em><em>07:51</em></span>
+						<div class="txt">
+							<h5>派送中</h5>
+							<p>[杭州市]浙江杭州康桥公司派件员:霍敏133886097 65正在为您派件。</p>
+						</div>
+					</li>
+					<li class="top_7">
+						<i class="node-icon"><span class="wuliu-icon"></span></i>
+						<span class="time"><em>01-10</em><em>07:51</em></span>
+						<div class="txt">
+							<h5>派送中</h5>
+							<p>【浙江杭州康桥公司】已收入</p>
+						</div>
+					</li>
+					<li class="top_7">
+						<i class="node-icon"></i>
+						<span class="time"><em>01-10</em><em>07:51</em></span>
+						<div class="txt">快件已到达【浙江杭州康桥公司】扫描员是【六部扫描员2】</div>
+					</li>
+					<li class="top_7">
+						<i class="node-icon"></i>
+						<span class="time"><em>01-10</em><em>07:51</em></span>
+						<div class="txt">由【浙江杭州中转部】发往【浙江杭州康桥公司】</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				//				switch (GetQueryString("orderType")){
+				//					case '1':
+				//						break;
+				//					default:
+				//						break;
+				//				}
+				if(GetQueryString("orderType")) {
+					$(".orderdetail-" + GetQueryString("orderType")).show();
+				}
+
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>新增发票信息</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mine.css" />
+		<style type="text/css">
+			
+		</style>
+	</head>
+
+	<body>
+		<div class="body invoice">
+			<div class="invoice_box">
+				<!--<div class="invoice_title">
+					结算方式
+				</div>-->
+				<div class="invoice_body">
+					<div class="selectitem active">
+						增值税专用发票
+					</div>
+					<div class="selectitem">
+						增值税普通发票
+					</div>
+				</div>
+			</div>
+			<div class="space"></div>
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">发票抬头</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="输入发票抬头信息">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">识别号</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="输入纳税人信息">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">联系方式</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="输入联系方式">
+					</div>
+				</div>
+				<div class="weui-cell weui-cell_access city-picker" data-open="0" bind-picker='city-picker2'>
+					<div class="weui-cell__hd"><label class="weui-label">公司地址</label></div>
+					<div class="weui-cell__bd">
+						<input type="text" class="weui-input" id="city-picker2" type="tel" placeholder="请选择">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">详细地址</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="输入公司详细地址">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">开户行名称</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="输入开户行信息">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">银行账号</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="输入账号信息">
+					</div>
+				</div>
+			</div>
+			<div class="weui-cells__tips">收票地址</div>
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">联系人</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="请输入联系人姓名">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">联系方式</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" placeholder="请输入联系方式">
+					</div>
+				</div>
+				<div class="weui-cell weui-cell_access city-picker" data-open="0" bind-picker='city-picker1'>
+					<div class="weui-cell__hd"><label class="weui-label">收票地址</label></div>
+					<div class="weui-cell__bd">
+						<input type="text" class="weui-input" id="city-picker1" type="tel" placeholder="请选择">
+					</div>
+					<div class="weui-cell__ft"></div>
+				</div>
+				<div class="weui-cell textarea-cell">
+					<div class="weui-cell__hd"><label class="weui-label">详细地址</label></div>
+					<div class="weui-cell__bd">
+						<textarea class="weui-textarea" placeholder="输入公司详细地址" rows="3"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="space"></div>
+		<div class="invoicebtn" id="show-confirm">
+			保存
+		</div>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/city-picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#city-picker2").cityPicker({
+					toolbarCloseText: "",
+					title: "",
+					toolbarTemplate: '<div class="toolbar"><div class="toolbar-inner">      <h1 class="title">{{title}}</h1><a href="javascript:$(\'#city-picker2\').picker(\'close\');" class="picker-button close-select picker-check"> 确定 </a>       </div>      </div>',
+					onChange: function(a, b, c) {
+						//						console.log(a);
+						//						console.log(b);
+						//						console.log(c);
+					},
+					onClose: function() {
+						$(".city-picker").attr("data-open", "0");
+					}
+				});
+				$("#city-picker1").cityPicker({
+					toolbarCloseText: "",
+					title: "",
+					toolbarTemplate: '<div class="toolbar"><div class="toolbar-inner">      <h1 class="title">{{title}}</h1><a href="javascript:$(\'#city-picker1\').picker(\'close\');" class="picker-button close-select picker-check"> 确定 </a>       </div>      </div>',
+					onChange: function(a, b, c) {
+						//						console.log(a);
+						//						console.log(b);
+						//						console.log(c);
+					},
+					onClose: function() {
+						$(".city-picker").attr("data-open", "0");
+					}
+				});
+
+				$(".city-picker").click(function(e) {
+					e.stopPropagation();
+					if($(this).attr("data-open") == "0") {
+						$("#" + $(this).attr("bind-picker")).picker("open");
+						$(this).attr("data-open", "1");
+					} else {
+						$("#" + $(this).attr("bind-picker")).picker("close");
+						$(this).attr("data-open", "0");
+					}
+
+				})
+			})
+			$(document).on("click", "#show-confirm", function() {
+		        $.confirm("发票信息一经确认无法修改，您确定要保存吗?", "提示", function() {
+		          	$.toast("保存成功!");
+		        }, function() {
+		         	//取消操作
+		        });
+		     });
+		</script>
+	</body>
+
+</html>

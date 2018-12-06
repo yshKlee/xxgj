@@ -1,0 +1,137 @@
+.address {
+	height: 100%;
+	margin-bottom: 0;
+	background: #F5F5F5;
+}
+
+.proaddress {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 15px;
+	width: 100%;
+}
+
+.address .weui-media-box__desc {
+	font-size: 14px;
+	line-height: 1.5;
+	padding: 5px 0;
+}
+
+.address .weui-media-box.weui-media-box_appmsg:before {
+	left: 0;
+}
+
+.address .checkbox {
+	border: none;
+	width: auto;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.address .checkbox span {
+	margin-left: 28px;
+	font-size: 14px;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+}
+
+.address .checkbox input[type='checkbox']+i {
+	display: block;
+	border: 1px solid #cccccc;
+	width: 16px;
+	height: 16px;
+	border-radius: 18px;
+	left: 1px;
+	top: 1px;
+	position: absolute;
+}
+
+.address .checkbox input[type='checkbox']:checked+i {
+	width: 18px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	background: url(../img/cj@2x.png) no-repeat;
+	background-size: 100%;
+	border-color: #FFFFFF;
+}
+
+.address .addressflex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.addricon {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	margin-left: 15px;
+}
+
+.addricon:active {
+	opacity: 0.8;
+}
+
+.addrbtn {
+	display: flex;
+	align-items: center;
+}
+
+.addricon img {
+	margin-right: 10px;
+}
+
+
+/*addr_add*/
+
+.addressbtn {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 49px;
+	line-height: 49px;
+	/*border-top: 1px solid #d2d2d2;*/
+	font-size: 15px;
+	background: #EC6200;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.addr_add .weui-cells {
+	margin: 0;
+}
+
+.addr_add .weui-cell {
+	padding: 15px;
+}
+
+.addr_add .weui-label,
+.addr_add .weui-input,
+.addr_add .weui-textarea {
+	font-size: 15px;
+}
+
+.addr_add .weui-label {
+	width: 80px;
+}
+
+.addr_add .weui_input {
+	font-size: 15px;
+	background: transparent;
+	text-align: right;
+	width: 100%;
+}
+
+.addr_add .weui-cell:before {
+	left: 0;
+}
+
+.addr_add .checkbox {
+	color: #666666;
+}

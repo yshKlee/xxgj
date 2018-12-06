@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>实用工具</title>
+		<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" href="../css/weui.min.css">
+		<link rel="stylesheet" href="../css/jquery-weui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<style type="text/css">
+			.weui-search-bar:after, .weui-search-bar:before{
+				content: none;
+			}
+			.con-txt{
+				width: 88%;
+				margin: 0 auto;
+			}
+			.placeholder{
+				margin: 5px;
+			    height: 2.3em;
+			    line-height: 2.3em;
+			    text-align: center;
+			    height: auto;
+			}
+			.bgline{
+				/*display: none;*/
+			}
+			.searchshop{
+				/*display: none;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="body">
+			<div class="con-txt">
+				<p style="text-align: center;font-size: 12px;margin-top:20px;padding: 30px 0;color: #999;">复制粘贴"商品号"可以检索出商品对应的搭配配件</p>
+				<div class="weui-search-bar" id="searchBar">
+					<form class="weui-search-bar__form">
+						<div class="weui-search-bar__box" style="background-color: #FFFFFF;border: 1px solid #d2d2d2;" style="padding-right: 0px;">
+							<i class="weui-icon-search" style="line-height: 38px;"></i>
+							<input style="height: 30px;" type="search" class="weui-search-bar__input" autofocus="autofocus" id="searchInput" placeholder="请输入商品号" required="">
+							<a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+						</div>
+					</form>
+					<button onclick="checkshop()" style="width: 60px;background-color: #FE5E11;color: #FFFFFF;border-radius: 2px;" class="msg-link" id="searchCancel">搜索</button>
+				</div>
+			</div>
+			<div class="bgline" style="width: 100%;height: 10px;background-color: #F0F0F0;margin-top: 30px;"></div>
+			<div class="searchshop">
+				<div class="con-txt">
+					<p class="dapei" style="width: 100%;text-align: center;color: #333;margin-top: 30px;">搭配附件</p>
+					<div class="weui-flex hide_list">
+				      	<div class="weui-flex__item">
+				      		<div class="placeholder">
+				      			<a href="prodetailtwo.html?formJifen=0" style="width: 100%;display: inline-block;">
+				      				<img src="../img/proitem.png" style="width: 100%;" alt="" />
+					      			<p style="color: #000000;font-size: 18px;">顶针</p>
+					      			<p style="color: #999999;font-size: 14px;">编号：DPB</p>
+				      			</a>
+				      		</div>
+				      	</div>
+				      	<div class="weui-flex__item">
+				      		<div class="placeholder">
+				      			<a href="prodetailtwo.html?formJifen=0" style="width: 100%;display: inline-block;">
+				      				<img src="../img/proitem.png" style="width: 100%;" alt="" />
+					      			<p style="color: #000000;font-size: 18px;">顶针</p>
+					      			<p style="color: #999999;font-size: 14px;">编号：DPB</p>
+				      			</a>
+				      		</div>
+				      	</div>
+				      	<div class="weui-flex__item">
+				      		<div class="placeholder">
+				      			<a href="prodetailtwo.html?formJifen=0" style="width: 100%;display: inline-block;">
+				      				<img src="../img/proitem.png" style="width: 100%;" alt="" />
+					      			<p style="color: #000000;font-size: 18px;">顶针</p>
+					      			<p style="color: #999999;font-size: 14px;">编号：DPB</p>
+				      			</a>
+				      		</div>
+				      	</div>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div id="footer"></div>
+		<script src="../js/jquery-2.1.4.js"></script>
+		<script src="../js/jquery-weui.min.js"></script>
+		<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$("#footer").load("footer.html", function() {
+				var item = $("#footer").find(".weui-tabbar__item").eq(1);
+				formatIconStyle(item);
+			});
+			function checkshop(){
+//				$(".bgline").show();
+//				$(".searchshop").show();
+			}
+		</script>
+	</body>
+
+</html>

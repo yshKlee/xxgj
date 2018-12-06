@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/demo.css" />
+    <link rel="stylesheet" href="../css/weui.min.css">
+    <link rel="stylesheet" href="../css/jquery-weui.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/sign.css" />
+
+</head>
+<body>
+
+    <div class="body sign-1">
+
+        <div class="header-box">
+            <img src="../img/sign-logo.jpg" />
+        </div>
+
+        <div class="weui-cells weui-cells_form">
+            <p>手机号</p>
+            <div class="weui-cells">
+                <div class="weui-cell weui-cell_select weui-cell_select-before">
+                    <div class="weui-cell__hd">
+                        <select class="weui-select" name="select2">
+                            <option value="1">+86</option>
+                            <option value="2">+80</option>
+                            <option value="3">+84</option>
+                            <option value="4">+87</option>
+                        </select>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入号码">
+                    </div>
+                </div>
+            </div>
+
+            <p>密码</p>
+            <div class="weui-cells weui-cells-password">
+                <div class="weui-cell weui-cell_select weui-cell_select-before">
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="password" placeholder="请输入密码" id="pwd">
+                    </div>
+                    <div class="weui-cell__ft">
+                        <button class="weui-vcode-btn" id="yan"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-cells__tips">
+                <a href="s_ret_pwd.html" class="weui-cell weui-cell_link">
+                    <div class="weui-cell__bd">忘记密码？</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="weui-btn-area">
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="sign">登录</a>
+        </div>
+
+        <div class="weui-btn-area">
+            <a class="weui-btn weui-btn_primary" href="regign.html" id="register">注册</a>
+        </div>
+    </div>
+
+    <script src="../js/jquery-2.1.4.js"></script>
+    <script src="../js/jquery-weui.min.js"></script>
+    <script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/basic.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <script type="text/javascript">
+        $(function(){
+            $("#yan").click(function(){
+                if($("#pwd").attr("type") == "password"){
+                    $("#pwd").attr("type","text");
+                    $("#yan").addClass("yan");
+                }
+                else{
+                    $("#pwd").attr("type","password");
+                    $("#yan").removeClass("yan");
+                }
+            })
+        })
+    </script>
+
+</body>
+</html>
